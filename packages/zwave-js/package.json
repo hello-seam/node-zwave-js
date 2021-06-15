@@ -9,13 +9,22 @@
     ".": {
         "import": "./build/esm/index.js",
         "require": "./build/cjs/index.js"
+    },
+    "./*": {
+      "import": "./build/esm/*.js",
+      "require": "./build/cjs/*.js"
     }
   },
   "types": "build/esm/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "build/esm/index.d.ts": [ "build/esm/index.d.ts" ],
+      "build/cjs/index.d.ts": [ "build/esm/index.d.ts" ],
+      "*": [ "build/esm/*" ]
+    }
+  },
   "files": [
-    "build/**/*.{js,d.ts,map}",
-    "index.{js,d.ts,map}",
-    "{CommandClass,Controller,Driver,Error,Node,Utils,Values}.{js,d.ts,map}"
+    "build/**/*.{js,d.ts,map}"
   ],
   "author": {
     "name": "AlCalzone",
@@ -55,9 +64,14 @@
     "winston": "^3.3.3",
     "xstate": "^4.20.0"
   },
+  "devDependencies": {
+    "@zwave-js/maintenance": "7.7.3",
+    "@zwave-js/testing": "7.0.0"
+  },
   "scripts": {
     "b": "yarn ts maintenance/_build.ts",
-    "build:full": "yarn b prebuild:full && yarn build && yarn b postbuild:full",
+    "deprecated": "node -p '\"\\n \\n \\033[31;1;4mThe \\\"build:full\\\" script has been deprecated. Use \\\"build\\\" instead!\\033[0m\\n \\n\"'",
+    "build:full": "yarn run deprecated && yarn run build",
     "build": "tsc -b tsconfig.build.json",
     "postbuild": "node ../../maintenance/esm2cjs.js --in=build/esm --out=build/cjs",
     "clean": "tsc -b tsconfig.build.json --clean",

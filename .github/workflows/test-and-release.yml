@@ -217,7 +217,7 @@ jobs:
 
     # Do a full build so the package files are regenerated
     - name: Compile TypeScript code
-      run: yarn run build:full
+      run: yarn run build
 
     - name: Import main entry point
       run: node -e 'require("./packages/zwave-js")'
@@ -333,7 +333,7 @@ jobs:
       run: yarn install --prefer-offline --frozen-lockfile
 
     - name: Create a clean build
-      run: yarn run build:full
+      run: yarn run build
 
     - name: Publish package to npm
       run: |
