@@ -119,8 +119,10 @@ import { Transaction } from "./Transaction";
 import { checkForConfigUpdates, installConfigUpdate } from "./UpdateConfig";
 import type { ZWaveOptions } from "./ZWaveOptions";
 
+const packageJsonPath = require.resolve("zwave-js/package.json");
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const packageJson = require("../../../package.json");
+const packageJson = require(packageJsonPath);
+const libraryRootDir = path.dirname(packageJsonPath);
 const libVersion: string = packageJson.version;
 
 // This is made with cfonts:
@@ -154,7 +156,7 @@ const defaultOptions: ZWaveOptions = {
 	skipInterview: false,
 	storage: {
 		driver: fsExtra,
-		cacheDir: path.resolve(__dirname, "../../..", "cache"),
+		cacheDir: path.resolve(libraryRootDir, "cache"),
 		throttle: "normal",
 	},
 };
