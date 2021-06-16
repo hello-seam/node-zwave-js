@@ -30,6 +30,7 @@
     "@actions/core": "^1.4.0",
     "@actions/exec": "^1.1.0",
     "@actions/github": "^5.0.0",
+    "@alcalzone/esm2cjs": "^1.0.0",
     "@alcalzone/release-script": "^1.10.0",
     "@babel/core": "^7.14.3",
     "@babel/plugin-proposal-decorators": "^7.14.2",

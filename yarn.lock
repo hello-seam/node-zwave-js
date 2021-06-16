@@ -36,6 +36,16 @@
   resolved "https://registry.yarnpkg.com/@actions/io/-/io-1.0.2.tgz#2f614b6e69ce14d191180451eb38e6576a6e6b27"
   integrity sha512-J8KuFqVPr3p6U8W93DOXlXW6zFvrQAJANdS+vw0YhusLIq+bszW8zmK2Fh1C2kDPX8FMvwIl1OUcFgvJoXLbAg==
 
+"@alcalzone/esm2cjs@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@alcalzone/esm2cjs/-/esm2cjs-1.0.0.tgz#4b119bf206aa3d1a24e9b9adf28612093b0b276e"
+  integrity sha512-oY7hMZUV7k63GCgfuxbwvGvF77X4LB9QJvsFc4w8qMG1J4NY8cr1//8Ny0IY2uc19SdDotE+FzuVrj8TbIHvTQ==
+  dependencies:
+    esbuild "^0.12.9"
+    fs-extra "^10.0.0"
+    tiny-glob "^0.2.9"
+    yargs "^16.2.0"
+
 "@alcalzone/jsonl-db@^1.2.5":
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/@alcalzone/jsonl-db/-/jsonl-db-1.2.5.tgz#c05e4346568d64a8d115b13ed80f131405160919"
@@ -4732,6 +4742,11 @@ esbuild@^0.12.8:
   resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.12.8.tgz#ac90da77cb3bfbf49ab815200bcef7ffe1a3348f"
   integrity sha512-sx/LwlP/SWTGsd9G4RlOPrXnIihAJ2xwBUmzoqe2nWwbXORMQWtAGNJNYLBJJqa3e9PWvVzxdrtyFZJcr7D87g==
 
+esbuild@^0.12.9:
+  version "0.12.9"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.12.9.tgz#bed4e7087c286cd81d975631f77d47feb1660070"
+  integrity sha512-MWRhAbMOJ9RJygCrt778rz/qNYgA4ZVj6aXnNPxFjs7PmIpb0fuB9Gmg5uWrr6n++XKwwm/RmSz6RR5JL2Ocsw==
+
 escalade@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/escalade/-/escalade-3.1.1.tgz#d8cfdc7000965c5a0174b4a82eaa5c0552742e40"
@@ -5308,6 +5323,15 @@ fs-extra@8.1.0:
     graceful-fs "^4.2.0"
     jsonfile "^4.0.0"
     universalify "^0.1.0"
+
+fs-extra@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-10.0.0.tgz#9ff61b655dde53fb34a82df84bb214ce802e17c1"
+  integrity sha512-C5owb14u9eJwizKGdchcDUQeFtlSHHthBk8pbX9Vc1PFZrLombudjDnNns88aYslCyF6IY5SUw3Roz6xShcEIQ==
+  dependencies:
+    graceful-fs "^4.2.0"
+    jsonfile "^6.0.1"
+    universalify "^2.0.0"
 
 fs-extra@^9.0.0:
   version "9.0.1"
