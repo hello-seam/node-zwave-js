@@ -1,6 +1,7 @@
 {
-  "name": "zwave-js",
+  "name": "@seamapi/zwave-js",
   "version": "7.10.0",
+  "private": false,
   "description": "Z-Wave driver written entirely in JavaScript/TypeScript",
   "keywords": [],
   "main": "index.js",
